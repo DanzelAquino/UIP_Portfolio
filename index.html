@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en" class="max-w-full overflow-x-hidden scrollbar-hide">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body class="bg-slate-100">
+    <nav id="navbar"
+        class="fixed top-0 left-0 w-full py-4 px-6 z-10 transition-opacity duration-300 ease-in-out bg-transparent">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="text-white text-xl md:text-2xl font-bold">Portfolio</div>
+        </div>
+    </nav>
+
+    <!-- Introduction / Hero -->
+    <section id="introduction"
+        class="relative h-screen bg-hero-pattern bg-cover bg-center md:bg-left flex items-center justify-center">
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="relative text-center text-white px-4 md:px-6 top-24 md:top-32">
+            <h1 class="text-4xl md:text-7xl mb-4 animate-fadeIn font-bubbly text-thicker-outline">Danzel Aquino</h1>
+            <h2 class="text-base md:text-lg mb-8">Computer Engineer<br>Currently an intern at UIP</h2>
+            <button onclick="openImageModal()"
+                class="mt-8 bg-transparent border-2 border-white hover:bg-slate-200 hover:bg-opacity-25 text-white py-2 px-4 rounded transition-all">
+                View Resume
+            </button>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden">
+        <button onclick="closeImageModal()"
+            class="absolute top-4 right-4 text-white text-4xl font-bold z-60 hover:text-gray-300">&times;</button>
+        <div class="flex flex-col items-center justify-center h-full">
+            <div class="relative w-full max-w-[80vw] max-h-[80vh] overflow-auto scrollbar-hide">
+                <img id="modalImage" src="img/resume.pdf" alt="Resume Modal" class="w-full h-auto object-contain">
+            </div>
+            <a href="img/resume.pdf" download="Danzel_Aquino(Resume).pdf"
+                class="mt-4 text-white text-4xl transition-all hover:text-gray-300">
+                <i class="fas fa-download"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- About Me -->
+    <section id="about"
+        class="flex flex-col md:flex-row items-center bg-slate-300 p-6 shadow-lg md:rounded-lg w-full md:w-4/5 mx-auto my-12">
+        <div class="flex-shrink-0">
+            <img src="img/image.jpg" alt="Danzel Aquino"
+                class="w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 object-cover rounded-full">
+        </div>
+        <div class="ml-0 md:ml-6 mt-4 md:mt-0 text-center md:text-left">
+            <h1 class="text-xl md:text-2xl font-bold mb-2">About Me</h1>
+            <p class="text-gray-700 text-justify leading-relaxed px-4 md:px-6 lg:px-10">
+                Currently I am an intern working at UIP as part of the management team. I am also a student in
+                Polytechnic University of the Philippines, under the course of Diploma in Computer Engineering
+                Technology. If I were to describe myself, I would say that I am quite approachable, and easy to work
+                with. I am also very cooperative when it comes to groupworks, and I also like to encourage the people
+                around me to collaborate and achieve our common goals. I am excited to learn new things on this field,
+                and I look forward to contributing to projects that can make a difference for the company.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills" class="text-center py-12">
+        <h1 class="text-2xl md:text-3xl font-bold mb-4">Skills</h1>
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Skill 1: Programming Languages -->
+                <div
+                    class="bg-white p-4 md:p-6 shadow-lg rounded-lg flex flex-col items-center border border-gray-300 justify-center">
+                    <i class="fas fa-code text-3xl md:text-4xl text-blue-500 mb-4"></i>
+                    <h2 class="text-lg md:text-xl font-bold mb-2">Programming Languages</h2>
+                    <p class="text-gray-700 text-sm md:text-base text-center mb-2">Experienced programming with the
+                        following languages,
+                        creating GUI's and console type of programs, and also creating backend code for webpages:</p>
+                    <ul class="text-gray-700 text-sm md:text-base text-center">
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>R</li>
+                    </ul>
+                </div>
+                <!-- Skill 2: Web Development -->
+                <div class="flex flex-col space-y-6">
+                    <div
+                        class="bg-white p-4 md:p-6 shadow-lg rounded-lg flex flex-col items-center border border-gray-300">
+                        <i class="fas fa-laptop-code text-3xl md:text-4xl text-green-500 mb-4"></i>
+                        <h2 class="text-lg md:text-xl font-bold mb-2">Web Development</h2>
+                        <p class="text-gray-700 text-sm md:text-base text-center mb-2">Proficient in building web
+                            applications using:</p>
+                        <ul class="text-gray-700 text-sm md:text-base text-center">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                    </div>
+                    <!-- Skill 3: Database Management -->
+                    <div
+                        class="bg-white p-4 md:p-6 shadow-lg rounded-lg flex flex-col items-center border border-gray-300">
+                        <i class="fas fa-database text-3xl md:text-4xl text-yellow-500 mb-4"></i>
+                        <h2 class="text-lg md:text-xl font-bold mb-2">Database Management</h2>
+                        <p class="text-gray-700 text-sm md:text-base text-center mb-2">Used databases for web
+                            applications:</p>
+                        <ul class="text-gray-700 text-sm md:text-base text-center">
+                            <li>MySQL</li>
+                            <li>Apache Derby</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Skill 4: IDEs -->
+                <div
+                    class="bg-white p-4 md:p-6 shadow-lg rounded-lg flex flex-col items-center border border-gray-300 justify-center">
+                    <i class="fas fa-cogs text-3xl md:text-4xl text-red-500 mb-4"></i>
+                    <h2 class="text-lg md:text-xl font-bold mb-2">IDEs</h2>
+                    <p class="text-gray-700 text-sm md:text-base text-center mb-2">Experienced with the following
+                        Integrated Development
+                        Environments:</p>
+                    <ul class="text-gray-700 text-sm md:text-base text-center">
+                        <li>Visual Studio Code</li>
+                        <li>Apache NetBeans</li>
+                        <li>Eclipse IDE</li>
+                        <li>RStudio</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 mt-6">
+                <!-- Extra Skills -->
+                <div class="bg-white p-4 md:p-6 shadow-lg rounded-lg flex flex-col items-center border border-gray-300">
+                    <i class="fas fa-photo-video text-3xl md:text-4xl text-purple-500 mb-4"></i>
+                    <h2 class="text-lg md:text-xl font-bold mb-2">Extra Skills</h2>
+                    <p class="text-gray-700 text-sm md:text-base text-center mb-5">Additional skills I possess include:
+                    </p>
+                    <hr class="w-4/5 bg-gray-700">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full pt-6">
+                        <div class="text-center">
+                            <h3 class="font-bold text-sm md:text-base">Photo Manipulation</h3>
+                            <ul class="text-gray-700 text-sm md:text-base">
+                                <li>Adobe Photoshop</li>
+                            </ul>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="font-bold text-sm md:text-base">Video Editing</h3>
+                            <ul class="text-gray-700 text-sm md:text-base">
+                                <li>DaVinci Resolve</li>
+                            </ul>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="font-bold text-sm md:text-base">Animation</h3>
+                            <ul class="text-gray-700 text-sm md:text-base">
+                                <li>Adobe Animate</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-12 bg-slate-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-3xl font-bold mb-8">Projects</h1>
+            <div class="space-y-12">
+                <!-- Project 1 -->
+                <div>
+                    <h2 class="text-2xl font-bold mb-6">Event Management System (My Latest Project)</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Image 1 -->
+                        <div class="relative group">
+                            <img src="img/p1_1.jpg" alt="Project 1 Image 1"
+                                class="w-full h-64 object-cover rounded-lg shadow-lg">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-lg">
+                                <div class="text-white text-center p-4 max-h-40 overflow-y-auto scrollbar-hide">
+                                    <h2 class="text-xl font-bold mb-2">Approved Events Table<br>(Client Side)</h2>
+                                    <p class="mb-4">A table where approved events can be seen by the clients. This is
+                                        also where clients can request for an event, which will be sent to the requests
+                                        database, awaiting approval.</p>
+                                    <button
+                                        class="bg-transparent border-2 border-white hover:bg-slate-200 hover:bg-opacity-25 text-white font-bold py-2 px-4 rounded"
+                                        onclick="openModal('modal1')">View Image</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Image 2 -->
+                        <div class="relative group">
+                            <img src="img/p1_2.jpg" alt="Project 1 Image 2"
+                                class="w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-lg">
+                                <div class="text-white text-center p-4 max-h-40 overflow-y-auto scrollbar-hide">
+                                    <h2 class="text-xl font-bold mb-2">Client's Confirmation of Rejected Events</h2>
+                                    <p class="mb-4">If an event is rejected, it will go straight to the rejected events
+                                        table. Awaiting confirmation from clients, for the client to know that their
+                                        event has been cancelled. After confirmation, it will immediately get deleted
+                                        from the database.</p>
+                                    <button
+                                        class="bg-transparent border-2 border-white hover:bg-slate-200 hover:bg-opacity-25 text-white font-bold py-2 px-4 rounded"
+                                        onclick="openModal('modal2')">View Image</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Image 3 -->
+                        <div class="relative group">
+                            <img src="img/p1_3.jpg" alt="Project 1 Image 3"
+                                class="w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-lg">
+                                <div class="text-white text-center p-4 max-h-40 overflow-y-auto scrollbar-hide">
+                                    <h2 class="text-xl font-bold mb-2">Event Requests Table (Admin Side)</h2>
+                                    <p class="mb-4">This table is only shown in the admin side of the webpage. This is
+                                        where the client's request for an event goes to. Now the admin can either
+                                        approve or reject the event, depending on their availability. If rejected it
+                                        will show a form, asking why the event is rejected.</p>
+                                    <button
+                                        class="bg-transparent border-2 border-white hover:bg-slate-200 hover:bg-opacity-25 text-white font-bold py-2 px-4 rounded"
+                                        onclick="openModal('modal3')">View Image</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Image 4 -->
+                        <div class="relative group">
+                            <img src="img/p1_4.jpg" alt="Project 1 Image 4"
+                                class="w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-lg">
+                                <div class="text-white text-center p-4 max-h-40 overflow-y-auto scrollbar-hide">
+                                    <h2 class="text-xl font-bold mb-2">Approved Events Table<br>(Admin Side) </h2>
+                                    <p class="mb-4">This table is the same table that is on the client's side, where the
+                                        clients can see approved events. However, in the admin side, there are actions
+                                        you can do to the events. You can edit the details of the event, you can delete
+                                        the event if it is finished, and you can cancel the event. The difference
+                                        between delete and cancelled, delete will delete the data entirely, while cancel
+                                        will move it back to the requested events with the rejected status.</p>
+                                    <button
+                                        class="bg-transparent border-2 border-white hover:bg-slate-200 hover:bg-opacity-25 text-white font-bold py-2 px-4 rounded"
+                                        onclick="openModal('modal4')">View Image</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Image 5 -->
+                        <div class="relative group">
+                            <img src="img/p1_5.jpg" alt="Project 1 Image 5"
+                                class="w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-lg">
+                                <div class="text-white text-center p-4 max-h-40 overflow-y-auto scrollbar-hide">
+                                    <h2 class="text-xl font-bold mb-2">Rejected Events Table (Admin Side)</h2>
+                                    <p class="mb-4">This table is where the rejected events are seen from the admin
+                                        side. You can delete the table immediately to get rid of the data so that it
+                                        doesn't take up the space on your table.</p>
+                                    <button
+                                        class="bg-transparent border-2 border-white hover:bg-slate-200 hover:bg-opacity-25 text-white font-bold py-2 px-4 rounded"
+                                        onclick="openModal('modal5')">View Image</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Image 6 -->
+                        <div class="relative group">
+                            <img src="img/p1_6.jpg" alt="Project 1 Image 6"
+                                class="w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-lg">
+                                <div class="text-white text-center p-4 max-h-40 overflow-y-auto scrollbar-hide">
+                                    <h2 class="text-xl font-bold mb-2">Users Table (Admin Side)</h2>
+                                    <p class="mb-4">This table shows the users that are registered to your webpage, you
+                                        can see their email, and password as seen. You can edit their details also to
+                                        turn them into an admin or change details. You can also delete users.</p>
+                                    <button
+                                        class="bg-transparent border-2 border-white hover:bg-slate-200 hover:bg-opacity-25 text-white font-bold py-2 px-4 rounded"
+                                        onclick="openModal('modal6')">View Image</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div>
+                    <h2 class="text-2xl font-bold mb-4">Dan'z CyberTech (My 1st Webpage Project)</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Image 1 -->
+                        <div class="relative group">
+                            <img src="img/p2_1.jpg" alt="Project 2 Image 1"
+                                class="w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-lg">
+                                <div class="text-white text-center p-4 max-h-40 overflow-y-auto scrollbar-hide">
+                                    <h2 class="text-xl font-bold mb-2">Homepage</h2>
+                                    <p class="mb-4">For my first webpage, I used simply HTML, and CSS to design my
+                                        homepage. For the background I used a gif as a background to make it look
+                                        animated. I thought that it would look great, but looking back at it now, I
+                                        think I could have done more for my design.</p>
+                                    <button
+                                        class="bg-transparent border-2 border-white hover:bg-slate-200 hover:bg-opacity-25 text-white font-bold py-2 px-4 rounded"
+                                        onclick="openModal('modal7')">View Image</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Image 2 -->
+                        <div class="relative group">
+                            <img src="img/p2_2.jpg" alt="Project 2 Image 2"
+                                class="w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-lg">
+                                <div class="text-white text-center p-4 max-h-40 overflow-y-auto scrollbar-hide">
+                                    <h2 class="text-xl font-bold mb-2">Footer</h2>
+                                    <p class="mb-4">Though I also think my footer could do some work, it is very bland
+                                        and has almost little to no design. I am proud that I created this layout,
+                                        though with a bit more design, it could have been much better.</p>
+                                    <button
+                                        class="bg-transparent border-2 border-white hover:bg-slate-200 hover:bg-opacity-25 text-white font-bold py-2 px-4 rounded"
+                                        onclick="openModal('modal8')">View Image</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Image 3 -->
+                        <div class="relative group">
+                            <img src="img/p2_3.jpg" alt="Project 2 Image 3"
+                                class="w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-lg">
+                                <div class="text-white text-center p-4 max-h-40 overflow-y-auto scrollbar-hide">
+                                    <h2 class="text-xl font-bold mb-2">About Us Page</h2>
+                                    <p class="mb-4">For the about us, I created a container with tabs, to be able to
+                                        view what the company is about, what is the story of the company, and who the
+                                        founders of the company are, and a little background to them.</p>
+                                    <button
+                                        class="bg-transparent border-2 border-white hover:bg-slate-200 hover:bg-opacity-25 text-white font-bold py-2 px-4 rounded"
+                                        onclick="openModal('modal9')">View Image</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Image 4 -->
+                        <div class="relative group">
+                            <img src="img/p2_4.jpg" alt="Project 2 Image 4"
+                                class="w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-lg">
+                                <div class="text-white text-center p-4 max-h-40 overflow-y-auto scrollbar-hide">
+                                    <h2 class="text-xl font-bold mb-2">Products Page</h2>
+                                    <p class="mb-4">For the products it is a long page containing everything that is
+                                        being sold. If you hover your mouse over the product, it will show the specs
+                                        that the product has. For example, for keyboards, it will show how big is the
+                                        keyboard, does it have RGB features, whether it is wired or wireless, and much
+                                        more. Every component has specs to see what these components have.</p>
+                                    <button
+                                        class="bg-transparent border-2 border-white hover:bg-slate-200 hover:bg-opacity-25 text-white font-bold py-2 px-4 rounded"
+                                        onclick="openModal('modal10')">View Image</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Image 5 -->
+                        <div class="relative group">
+                            <img src="img/p2_5.jpg" alt="Project 2 Image 5"
+                                class="w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-lg">
+                                <div class="text-white text-center p-4 max-h-40 overflow-y-auto scrollbar-hide">
+                                    <h2 class="text-xl font-bold mb-2">Partners Page</h2>
+                                    <p class="mb-4">For the partners page, it will show the companies that have allowed
+                                        us to sell the products that are being sold by the company. I put the
+                                        description of each company in this page.</p>
+                                    <button
+                                        class="bg-transparent border-2 border-white hover:bg-slate-200 hover:bg-opacity-25 text-white font-bold py-2 px-4 rounded"
+                                        onclick="openModal('modal11')">View Image</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Image 6 -->
+                        <div class="relative group">
+                            <img src="img/p2_6.jpg" alt="Project 2 Image 6"
+                                class="w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-lg">
+                                <div class="text-white text-center p-4 max-h-40 overflow-y-auto scrollbar-hide">
+                                    <h2 class="text-xl font-bold mb-2">Contact Us Page</h2>
+                                    <p class="mb-4">A page with a contact form, for being able to contact the company,
+                                        though the form is complete, unfortunately it is not working. So it is basically
+                                        just a form with no where to go to. </p>
+                                    <button
+                                        class="bg-transparent border-2 border-white hover:bg-slate-200 hover:bg-opacity-25 text-white font-bold py-2 px-4 rounded"
+                                        onclick="openModal('modal12')">View Image</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <!-- Project 1 Modals -->
+    <!-- Image 1 -->
+    <div id="modal1" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen">
+            <div class="relative w-11/12 sm:w-3/4 max-w-6xl">
+                <img src="img/p1_1.jpg" alt="Project 1 Image 1" class="w-full h-auto max-h-[90vh] rounded-lg">
+            </div>
+        </div>
+        <button class="absolute top-4 right-4 text-white text-4xl font-bold z-60 hover:text-gray-300"
+            onclick="closeModal('modal1')">&times;</button>
+    </div>
+    <!-- Image 2 -->
+    <div id="modal2" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen">
+            <div class="relative w-11/12 sm:w-3/4 max-w-6xl">
+                <img src="img/p1_2.jpg" alt="Project 1 Image 2" class="w-full h-auto max-h-[90vh] rounded-lg">
+            </div>
+        </div>
+        <button class="absolute top-4 right-4 text-white text-4xl font-bold z-60 hover:text-gray-300"
+            onclick="closeModal('modal2')">&times;</button>
+    </div>
+    <!-- Image 3 -->
+    <div id="modal3" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen">
+            <div class="relative w-11/12 sm:w-3/4 max-w-6xl">
+                <img src="img/p1_3.jpg" alt="Project 1 Image 3" class="w-full h-auto max-h-[90vh] rounded-lg">
+            </div>
+        </div>
+        <button class="absolute top-4 right-4 text-white text-4xl font-bold z-60 hover:text-gray-300"
+            onclick="closeModal('modal3')">&times;</button>
+    </div>
+    <!-- Image 4 -->
+    <div id="modal4" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen">
+            <div class="relative w-11/12 sm:w-3/4 max-w-6xl">
+                <img src="img/p1_4.jpg" alt="Project 1 Image 4" class="w-full h-auto max-h-[90vh] rounded-lg">
+            </div>
+        </div>
+        <button class="absolute top-4 right-4 text-white text-4xl font-bold z-60 hover:text-gray-300"
+            onclick="closeModal('modal4')">&times;</button>
+    </div>
+    <!-- Image 5 -->
+    <div id="modal5" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen">
+            <div class="relative w-11/12 sm:w-3/4 max-w-6xl">
+                <img src="img/p1_5.jpg" alt="Project 1 Image 5" class="w-full h-auto max-h-[90vh] rounded-lg">
+            </div>
+        </div>
+        <button class="absolute top-4 right-4 text-white text-4xl font-bold z-60 hover:text-gray-300"
+            onclick="closeModal('modal5')">&times;</button>
+    </div>
+    <!-- Image 6 -->
+    <div id="modal6" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen">
+            <div class="relative w-11/12 sm:w-3/4 max-w-6xl">
+                <img src="img/p1_6.jpg" alt="Project 1 Image 6" class="w-full h-auto max-h-[90vh] rounded-lg">
+            </div>
+        </div>
+        <button class="absolute top-4 right-4 text-white text-4xl font-bold z-60 hover:text-gray-300"
+            onclick="closeModal('modal6')">&times;</button>
+    </div>
+
+
+    <!-- Project 2 Modals -->
+    <!-- Image 1 -->
+    <div id="modal7" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen">
+            <div class="relative w-11/12 sm:w-3/4 max-w-6xl">
+                <img src="img/p2_1.jpg" alt="Project 2 Image 1" class="w-full h-auto max-h-[90vh] rounded-lg">
+            </div>
+        </div>
+        <button class="absolute top-4 right-4 text-white text-4xl font-bold z-60 hover:text-gray-300"
+            onclick="closeModal('modal7')">&times;</button>
+    </div>
+    <!-- Image 2 -->
+    <div id="modal8" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen">
+            <div class="relative w-11/12 sm:w-3/4 max-w-6xl">
+                <img src="img/p2_2.jpg" alt="Project 2 Image 2" class="w-full h-auto max-h-[90vh] rounded-lg">
+            </div>
+        </div>
+        <button class="absolute top-4 right-4 text-white text-4xl font-bold z-60 hover:text-gray-300"
+            onclick="closeModal('modal8')">&times;</button>
+    </div>
+    <!-- Image 3 -->
+    <div id="modal9" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen">
+            <div class="relative w-11/12 sm:w-3/4 max-w-6xl">
+                <img src="img/p2_3.jpg" alt="Project 2 Image 3" class="w-full h-auto max-h-[90vh] rounded-lg">
+            </div>
+        </div>
+        <button class="absolute top-4 right-4 text-white text-4xl font-bold z-60 hover:text-gray-300"
+            onclick="closeModal('modal9')">&times;</button>
+    </div>
+    <!-- Image 4 -->
+    <div id="modal10" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen">
+            <div class="relative w-11/12 sm:w-3/4 max-w-6xl">
+                <img src="img/p2_4.jpg" alt="Project 2 Image 4" class="w-full h-auto max-h-[90vh] rounded-lg">
+            </div>
+        </div>
+        <button class="absolute top-4 right-4 text-white text-4xl font-bold z-60 hover:text-gray-300"
+            onclick="closeModal('modal10')">&times;</button>
+    </div>
+    <!-- Image 5 -->
+    <div id="modal11" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen">
+            <div class="relative w-11/12 sm:w-3/4 max-w-6xl">
+                <img src="img/p2_5.jpg" alt="Project 2 Image 5" class="w-full h-auto max-h-[90vh] rounded-lg">
+            </div>
+        </div>
+        <button class="absolute top-4 right-4 text-white text-4xl font-bold z-60 hover:text-gray-300"
+            onclick="closeModal('modal11')">&times;</button>
+    </div>
+    <!-- Image 6 -->
+    <div id="modal12" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen">
+            <div class="relative w-11/12 sm:w-3/4 max-w-6xl">
+                <img src="img/p2_6.jpg" alt="Project 2 Image 6" class="w-full h-auto max-h-[90vh] rounded-lg">
+            </div>
+        </div>
+        <button class="absolute top-4 right-4 text-white text-4xl font-bold z-60 hover:text-gray-300"
+            onclick="closeModal('modal12')">&times;</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-b from-slate-400 to-white text-black py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-between mb-8">
+                <!-- Social Media Icons Section -->
+                <div class="w-full sm:w-1/3 mb-6">
+                    <h2 class="text-xl font-bold mb-4">Contact Me</h2>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=100093620198662" target="_blank"
+                            class="text-gray-600 hover:text-gray-800 transition-colors">
+                            <i class="fab fa-facebook-f fa-2x"></i>
+                        </a>
+                        <a href="https://m.me/100093620198662" target="_blank"
+                            class="text-gray-600 hover:text-gray-800 transition-colors">
+                            <i class="fab fa-facebook-messenger fa-2x"></i>
+                        </a>
+                        <a href="https://www.instagram.com/danzelaquino/" target="_blank"
+                            class="text-gray-600 hover:text-gray-800 transition-colors">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Quick Links Section -->
+                <div class="w-full sm:w-1/3 mb-6">
+                    <h2 class="text-xl font-bold mb-4">Quick Links</h2>
+                    <ul>
+                        <li><a href="#introduction" class="hover:underline">Introduction</a></li>
+                        <li><a href="#about" class="hover:underline">About Me</a></li>
+                        <li><a href="#skills" class="hover:underline">Skills</a></li>
+                        <li><a href="#projects" class="hover:underline">Projects</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Info Section -->
+                <div class="w-full sm:w-1/3 mb-6">
+                    <h2 class="text-xl font-bold mb-4">Contact Info</h2>
+                    <p class="mb-2">Unit-1648, Shine Residences, Ugong, Pasig City</p>
+                    <p class="mb-2">Email: danzel21.quino@gmail.com</p>
+                    <p>Phone: 09951050272</p>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-700 pt-6 text-center">
+                <p class="text-sm">&copy; 2024 Danzel Aquino. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openImageModal() {
+            const modal = document.getElementById('imageModal');
+            const image = document.getElementById('modalImage');
+            image.src = 'img/resume.jpg';
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            const image = document.getElementById('modalImage');
+            image.src = '';
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            const scrollThreshold = window.innerWidth <= 768 ? 175 : 600;
+
+            if (window.scrollY > scrollThreshold) {
+                navbar.classList.add('opacity-0');
+            } else {
+                navbar.classList.remove('opacity-0');
+            }
+        });
+
+
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+    </script>
+</body>
+
+</html>
